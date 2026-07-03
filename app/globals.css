@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-fg-emerald-deep: #0E2A1E;
+  --color-fg-emerald: #1C4D34;
+  --color-fg-gold: #C9A24B;
+  --color-fg-gold-light: #E4C77A;
+  --color-fg-cream: #F5F1E8;
+  --color-fg-black: #0A0A0A;
+  --color-fg-amber: #E2842C;
+
+  --font-display: var(--font-display-raw);
+  --font-body: var(--font-body-raw);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  background: radial-gradient(
+      ellipse 80% 50% at 50% -10%,
+      rgba(201, 162, 75, 0.12),
+      transparent
+    ),
+    linear-gradient(180deg, #0E2A1E 0%, #1C4D34 60%, #0E2A1E 100%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background-color: #C9A24B;
+  color: #0A0A0A;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
