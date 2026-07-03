@@ -51,7 +51,7 @@ export default function Navbar() {
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6">
           <Link href="/" className="relative block h-14 w-14 flex-shrink-0 sm:h-16 sm:w-16">
             <Image
-              src="/images/logo.png"
+              src="/images/logoo.png"
               alt="Foodgies Corner"
               fill
               className="object-contain"
