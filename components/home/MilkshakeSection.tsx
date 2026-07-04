@@ -59,7 +59,7 @@ export default function MilkshakeSection() {
           }`}
         >
           {milkshakes.items.map((item) => (
-            <FlavorCard key={item.id} item={item} variant="glass" />
+            <FlavorCard key={item.id} item={item} variant="glass" imageSrc={item.imageSrc} />
           ))}
         </div>
       </div>

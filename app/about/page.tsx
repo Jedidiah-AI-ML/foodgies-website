@@ -54,7 +54,7 @@ export default function AboutPage() {
         <div className="mt-6 rounded-2xl border border-fg-gold/20 bg-fg-emerald/30 p-8">
           <p className="text-xs uppercase tracking-[0.3em] text-fg-gold">Find Us</p>
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BRAND.address)}`}
+            href={BRAND.mapsLink}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-block text-sm text-fg-cream/80 underline decoration-fg-gold/40 underline-offset-4 transition-colors hover:text-fg-gold"

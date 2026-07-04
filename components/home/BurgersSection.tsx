@@ -14,12 +14,12 @@ export default function BurgersSection() {
           Burgers Worth the Bite
         </h2>
         <p className="mt-3 max-w-md text-sm text-fg-cream/60">
-          Stacked, seared, and served hot, Every burger built to satisfy.
+          Stacked, seared, and served hot, Every bite calls for more.
         </p>
 
         <div className="mt-10 flex gap-5 overflow-x-auto pb-4 scrollbar-hide">
           {burgers.items.map((item) => (
-            <FlavorCard key={item.id} item={item} />
+            <FlavorCard key={item.id} item={item} imageSrc={item.imageSrc} />
           ))}
         </div>
       </div>

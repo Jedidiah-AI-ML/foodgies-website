@@ -16,12 +16,20 @@ export default function FlavorCard({ item, imageSrc, variant = "solid" }: Flavor
       ? "bg-fg-cream/10 backdrop-blur-md border border-fg-cream/20 hover:border-fg-gold/50"
       : "bg-fg-emerald/40 border border-fg-gold/10 hover:border-fg-gold/40";
 
+  const orderLink = getWhatsAppOrderLink(item.name);
+
   return (
     <div
-      className={`group relative w-64 flex-shrink-0 overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-fg-gold/10 ${surfaceClasses}`}
+      className={`group relative w-[72vw] flex-shrink-0 overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-fg-gold/10 sm:w-64 ${surfaceClasses}`}
     >
-      {/* Image */}
-      <div className="relative h-48 w-full overflow-hidden bg-fg-emerald-deep/40">
+      {/* Image — tappable, opens WhatsApp order link */}
+      <a
+        href={orderLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Order ${item.name} on WhatsApp`}
+        className="relative block h-48 w-full overflow-hidden bg-fg-emerald-deep/40"
+      >
         {imageSrc ? (
           <Image
             src={imageSrc}
@@ -40,14 +48,22 @@ export default function FlavorCard({ item, imageSrc, variant = "solid" }: Flavor
             {item.tag}
           </span>
         )}
-      </div>
+      </a>
 
       {/* Content */}
       <div className="p-4">
         <div className="flex items-start justify-between gap-2">
-          <h3 className="font-display text-base text-fg-cream">{item.name}</h3>
           <a
-            href={getWhatsAppOrderLink(item.name)}
+            href={orderLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Order ${item.name} on WhatsApp`}
+            className="font-display text-base text-fg-cream transition-colors hover:text-fg-gold"
+          >
+            {item.name}
+          </a>
+          <a
+            href={orderLink}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Order ${item.name} on WhatsApp`}

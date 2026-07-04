@@ -32,7 +32,7 @@ export default function ContactPage() {
       icon: MapPin,
       label: "Location",
       value: BRAND.address,
-      href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BRAND.address)}`,
+      href: BRAND.mapsLink,
       external: true,
     },
   ];

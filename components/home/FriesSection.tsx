@@ -33,7 +33,7 @@ export default function FriesSection() {
 
         <div className="mt-10 flex gap-5 overflow-x-auto pb-4 scrollbar-hide">
           {fries.items.map((item) => (
-            <FlavorCard key={item.id} item={item} variant="glass" />
+            <FlavorCard key={item.id} item={item} variant="glass" imageSrc={item.imageSrc} />
           ))}
         </div>
       </div>

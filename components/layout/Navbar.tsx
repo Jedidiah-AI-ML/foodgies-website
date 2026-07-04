@@ -145,7 +145,7 @@ export default function Navbar() {
 
             <div className="flex flex-col gap-4">
               <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BRAND.address)}`}
+                href={BRAND.mapsLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}

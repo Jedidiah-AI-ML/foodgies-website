@@ -24,9 +24,7 @@ export default function OtherMenuSection() {
             <div key={category.key}>
               <h3 className="font-display text-xl text-fg-gold">{category.label}</h3>
               <div className="mt-5 flex gap-5 overflow-x-auto pb-4 scrollbar-hide">
-                {category.items.map((item) => (
-                  <FlavorCard key={item.id} item={item} />
-                ))}
+                {category.items.map((item) => (<FlavorCard key={item.id} item={item} imageSrc={item.imageSrc} />))}
               </div>
             </div>
           ))}
